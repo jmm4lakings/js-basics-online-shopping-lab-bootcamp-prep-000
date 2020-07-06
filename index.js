@@ -58,14 +58,15 @@ function total() {
 }	 
 
 function removeFromCart(item) {
-  
-function placeOrder(cardNumber) {
-  if (!cardNumber) {
-    return console.log("We don't have a credit card on file for you to place your order.")
+  console.log(item);
+  for(let i = 0; i < cart.length; i++) {
+    if(cart[i].hasOwnProperty(item)) {
+      cart.splice(i, 1);
+      return cart;
+    }
   }
+  console.log('That item is not in your cart.');
+}	
 
-  console.log(`Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`)
-
-  cart = []
-}
+function placeOrder(cardNumber) 
 
