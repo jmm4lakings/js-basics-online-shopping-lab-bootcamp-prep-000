@@ -77,4 +77,5 @@ function placeOrder(cardNumber) {
   }
   addToCart("yams");
   removeFromCart("watermelon");
+  const firstItem = Object.keys(getCart()[0])[0];
   
