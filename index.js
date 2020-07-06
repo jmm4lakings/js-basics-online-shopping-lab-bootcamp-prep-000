@@ -19,7 +19,7 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  
+  if ()
 }
 
 function total() {
