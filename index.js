@@ -78,4 +78,4 @@ function placeOrder(cardNumber) {
   addToCart("yams");
   removeFromCart("watermelon");
   const firstItem = Object.keys(getCart()[0])[0];
-  
+  const secondItem = Object.keys(getCart()[1])[0];
