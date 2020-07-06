@@ -76,4 +76,5 @@ function placeOrder(cardNumber) {
     cart.length = 0;
   }
   addToCart("yams");
+  removeFromCart("watermelon");
   
