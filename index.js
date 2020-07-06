@@ -48,20 +48,17 @@ function viewCart() {
   }
 
 function total() {
-   
-
+   var total = 0;
+  for(let i = 0; i < cart.length; i++) {
+    var item = cart[i];
+    var itemName = Object.keys(item)[0];
+    total += item[itemName];
+  }
+  return total;
+}	 
 
 function removeFromCart(item) {
-  let itemInCart = false
-
-  for (let i = 0, l = cart.length; i < l; i++) {
-    if (cart[i].hasOwnProperty(item)) {
-      itemInCart = true
-      cart = cart.slice(0, i).concat(cart.slice(i + 1))
-    }
-  }
-}
-
+  
 function placeOrder(cardNumber) {
   if (!cardNumber) {
     return console.log("We don't have a credit card on file for you to place your order.")
